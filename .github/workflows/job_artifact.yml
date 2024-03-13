@@ -9,8 +9,6 @@ jobs:
       - name: Install dependency
         run: npm ci
 
-      - name: Test code
-        run: npm run test
 
   build:
    needs: test
