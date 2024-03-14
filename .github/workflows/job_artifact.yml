@@ -58,7 +58,7 @@ jobs:
           package.json
     - name: Exibe variavel de ambiente
       run: |
-        echo "MONGODB_ADDRESS: ${{ env.MONGODB_CLUSTER_ADDRESS }}"
+        echo "MONGODB_ADDRESS: ${{ env.MONGO_DB_NAME }}"
 
   deploy:
     needs: build
