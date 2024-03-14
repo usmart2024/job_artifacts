@@ -18,7 +18,7 @@ jobs:
         run: npm ci
       - name: Exibe variavel de ambiente
         run: | 
-         echo " Valor da variavel: ${{ env.MONGODB_CLUSTER_ADDRESS }} "
+         echo " Valor da variavel: ${{ vars.MONGODB_CLUSTER_ADDRESS }} "
 
 #      - name: Lint
 #        run: |
