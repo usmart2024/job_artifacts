@@ -1,7 +1,15 @@
 name: Deployment Exercise 1
 on: push
+
+env:
+  MONGO_DB_NAME: gha-demo
+
 jobs:
   test:
+    env:
+      MONGODB_CLUSTER_ADDRESS: CLUSTER0.15PWQ
+      MONGODB_USERNAME:
+      MONGODB_PASSWORD:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -48,6 +56,9 @@ jobs:
         path: | 
           dist
           package.json
+    - name: Exibe variavel de ambiente
+      run: |
+        echo "MONGODB_ADDRESS: ${{ env.MONGODB_CLUSTER_ADDRESS }}"
 
   deploy:
     needs: build
