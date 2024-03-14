@@ -2,7 +2,7 @@ name: Deployment Exercise 1
 on: push
 
 env:
-  MONGO_DB_NAME: gha-demo
+  MONGO_DB_NAME: ${{secrets.MONGO_DB_NAME}}
 
 jobs:
   test:
