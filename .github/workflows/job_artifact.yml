@@ -6,8 +6,9 @@ env:
 
 jobs:
   test:
+    environment: node_project
     env:
-      MONGODB_CLUSTER_ADDRESS: CLUSTER0.15PWQ
+      MONGODB_CLUSTER_ADDRESS: ${{ env.MONGODB_CLUSTER_ADDRESS }}
       MONGODB_USERNAME:
       MONGODB_PASSWORD:
     runs-on: ubuntu-latest
